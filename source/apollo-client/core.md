@@ -23,7 +23,7 @@ const query = gql`
 The `gql` tag is a function under the hood, therefore it must be imported wherever it is used:
 
 ```js
-import gql from 'apollo-client/gql';
+import gql from 'graphql-tag';
 
 const query = gql`...`;
 ```
@@ -32,11 +32,11 @@ Alternatively, if you prefer *not* to import the `gql` tag each time you use it,
 
 ```js
 // In a browser
-import { registerGqlTag } from 'apollo-client/gql';
+import gql from 'graphql-tag';
 window['gql'] = gql;
 
 // In node.js
-import { registerGqlTag } from 'apollo-client/gql';
+import gql from 'graphql-tag';
 global['gql'] = gql;
 
 // Now, in any part of your app you can use the gql tag
